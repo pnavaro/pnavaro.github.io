@@ -10,7 +10,7 @@ slides = $(patsubst math-python/%.ipynb, slides/%, $(notebooks))
 all: title $(slides)
 
 slides/% : math-python/%.ipynb
-	@jupyter nbconvert $< --to slides --reveal-prefix ../reveal.js --output ../$@
+	@jupyter nbconvert $< --to slides --reveal-prefix reveal.js --output ../$@
 	@echo "<li><a href=\"$@.slides.html\">$@</a></li>" >> index.html
 
 
