@@ -1,2 +1,11 @@
-default:
-	jupyter nbconvert math-python/*.ipynb --to slides --reveal-prefix reveal.js
+
+00: math-python/00.Installation.ipynb
+	jupyter nbconvert $^ --to slides --reveal-prefix reveal.js --output ../$@
+
+#math-python/01.Introduction.ipynb
+#math-python/02.Strings.ipynb
+#math-python/03.Lists.ipynb
+#math-python/04.Control.Flow.Tools.ipynb
+#math-python/05.Modules.ipynb
+#math-python/06.Input.And.Output.ipynb
+#math-python/07.Errors.and.Exceptions.ipynb
