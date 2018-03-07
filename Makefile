@@ -1,6 +1,11 @@
+default: title 00
 
-00: math-python/00.Installation.ipynb
-	jupyter nbconvert $^ --to slides --reveal-prefix reveal.js --output ../$@
+title:
+	echo "<h1> Python slides </h1>" > index.html
+
+00: math-python/00.Installation.ipynb title
+	jupyter nbconvert $< --to slides --reveal-prefix reveal.js --output ../$@
+	echo "<a href=\"$@.slides.html\">$@</a>" >> index.html
 
 #math-python/01.Introduction.ipynb
 #math-python/02.Strings.ipynb
