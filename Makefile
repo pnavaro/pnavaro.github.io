@@ -3,8 +3,8 @@ title:
 	mkdir -p slides
 	echo "<h1> Python slides </h1>" > index.html
 
-notebooks = $(shell find math-python/ -type f -name "*.ipynb")
-slides = $(patsubst math-python/%.ipynb, slides/%, $(notebooks))
+notebooks = $(shell find math-python -type f -name "*.ipynb")
+slides = $(patsubst math-python%.ipynb, slides%, $(notebooks))
 
 .PHONY:all
 all: title $(slides)
