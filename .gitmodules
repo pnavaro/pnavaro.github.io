@@ -1,6 +1,3 @@
 [submodule "math-python"]
 	path = math-python
 	url = https://github.com/pnavaro/math-python
-[submodule "reveal.js"]
-	path = slides/reveal.js
-	url = https://github.com/hakimel/reveal.js.git
