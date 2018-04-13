@@ -11929,9 +11929,9 @@ a.anchor-link {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fibonacci series:</span>
 <span class="c1"># the sum of two elements defines the next</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-     <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11948,7 +11948,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1 1 2 3 5 8 </pre>
+<pre>1.0,2.0,1.5,1.6666666666666667,1.6,1.625,1.6153846153846154,1.619047619047619,1.6176470588235294,1.6181818181818182,1.6179775280898876,1.6180555555555556,1.6180257510729614,1.6180371352785146,1.618032786885246,1.618034447821682,</pre>
 </div>
 </div>
 
@@ -12029,19 +12029,6 @@ a.anchor-link {
 <li>Test the Collatz conjecture for n = 100000.</li>
 <li>How many steps do you need to reach 1 ?</li>
 </ul>
-<p><button data-toggle="collapse" data-target="#collatz" class='btn btn-primary'>Solution</button></p>
-<p><div id="collatz" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100000</span> <span class="c1"># </span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span> 
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># returns the last bit of n binary representation.</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># Pure division by 2</span>
-    <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="c1"># 128</span>
-</pre></div>
 
 </div>
 </div>
@@ -12057,10 +12044,10 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;irmar&quot;</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
@@ -12078,11 +12065,12 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>i
-r
-m
-a
-r
+<pre>p
+y
+t
+h
+o
+n
 </pre>
 </div>
 </div>
@@ -12093,12 +12081,11 @@ r
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s2">&quot;Python IRMAR january 23th 2018&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s2">&quot;Python Lille april 10th 2018&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>   
 </pre></div>
 
 </div>
@@ -12116,9 +12103,9 @@ r
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Python 6
-IRMAR 5
-january 7
-23th 4
+Lille 5
+april 5
+10th 4
 2018 4
 </pre>
 </div>
@@ -12142,35 +12129,6 @@ you obtain two empty strings.</p>
 <span class="o">..</span>
 <span class="bp">True</span>
 </pre></div>
-<p><button data-toggle="collapse" data-target="#anagram" class='btn btn-primary'>Solution</button></p>
-<p><div id="anagram" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;pascal obispo&quot;</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;pablo picasso&quot;</span>
-
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
-
-<span class="c1"># solution with loops</span>
-<span class="k">for</span> <span class="n">c1</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">c2</span> <span class="ow">in</span> <span class="n">s2</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">c1</span> <span class="o">==</span> <span class="n">c2</span><span class="p">:</span>
-            <span class="n">s1</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-            <span class="n">s2</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">c2</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>     
-
-<span class="c1"># solution with lists</span>
-<span class="n">s1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;pascal obispo&quot;</span><span class="p">)</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;pablo picasso&quot;</span><span class="p">)</span>
-<span class="n">s1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="n">s2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span><span class="p">)</span>
-
-
-<span class="c1"># better solution</span>
-<span class="n">s1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;pascalobispo&quot;</span><span class="p">)</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;pablopicasso&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">s2</span><span class="p">))</span>
-</pre></div>
 
 </div>
 </div>
@@ -12191,7 +12149,7 @@ you obtain two empty strings.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
@@ -12207,7 +12165,7 @@ you obtain two empty strings.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -12224,7 +12182,7 @@ you obtain two empty strings.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -12240,7 +12198,7 @@ you obtain two empty strings.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12257,7 +12215,7 @@ you obtain two empty strings.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
@@ -12273,7 +12231,7 @@ you obtain two empty strings.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12290,7 +12248,7 @@ you obtain two empty strings.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -12324,28 +12282,9 @@ you obtain two empty strings.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Exercise-Exponential">Exercise Exponential<a class="anchor-link" href="#Exercise-Exponential">&#182;</a></h3><ul>
-<li>Write some code to compute the exponential value using the taylor series developed at 0 and without any import of external modules:</li>
+<li>Write some code to compute the exponential mathematical constant $e \simeq 2.718281828459045$ using the taylor series developed at 0 and without any import of external modules:</li>
 </ul>
-<p>$$ e^x = \sum_{i=0}^n \frac{x^i}{i!} $$</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">exponential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
-    <span class="o">...</span>
-
-<span class="n">exponential</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>    
-<span class="c1"># 2.718281828459045</span>
-</pre></div>
-<p><button data-toggle="collapse" data-target="#exponential" class='btn btn-primary'>Solution</button></p>
-<p><div id="exponential" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-   <span class="n">n</span> <span class="o">=</span> <span class="mi">50</span>
-   <span class="n">e</span> <span class="o">=</span> <span class="mf">0.</span>
-   <span class="n">power</span> <span class="o">=</span> <span class="mf">1.</span>
-   <span class="n">fact</span> <span class="o">=</span> <span class="mf">1.</span>
-   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-      <span class="n">e</span> <span class="o">+=</span> <span class="n">power</span><span class="o">/</span><span class="n">fact</span>
-      <span class="n">power</span> <span class="o">*=</span> <span class="n">x</span>
-      <span class="n">fact</span> <span class="o">*=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
-   <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-</pre></div>
+<p>$$ e \simeq \sum_{n=0}^{50} \frac{1}{n!} $$</p>
 
 </div>
 </div>
@@ -12360,16 +12299,16 @@ you obtain two empty strings.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c1"># n = 2,3,4,5,6,7,8,9</span>
-   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span> <span class="c1"># x = 2, ..., n-1</span>
-      <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># Return the division remain (mod)</span>
-         <span class="nb">print</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot; = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="n">x</span><span class="p">)</span>
-         <span class="k">break</span>
-      <span class="k">else</span><span class="p">:</span>
-         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">%d</span><span class="s2"> is a prime number&quot;</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>     <span class="c1"># n = 2,3,4,5,6,7,8,9</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  <span class="c1"># x = 2, ..., n-1</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># Return the division remain (mod)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot; = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">%d</span><span class="s2"> is a prime number&quot;</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12418,10 +12357,10 @@ you obtain two empty strings.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">course</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; Python november 17,20,21,24 2017 OSUR &quot;&quot;&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">course</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; Python april 10,11,12 2018 LILLE &quot;&quot;&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
 </pre></div>
 
@@ -12439,7 +12378,7 @@ you obtain two empty strings.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Python&#39;, &#39;november&#39;, &#39;17,20,21,24&#39;, &#39;2017&#39;, &#39;OSUR&#39;]
+<pre>[&#39;Python&#39;, &#39;april&#39;, &#39;10,11,12&#39;, &#39;2018&#39;, &#39;LILLE&#39;]
 </pre>
 </div>
 </div>
@@ -12450,7 +12389,7 @@ you obtain two empty strings.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
@@ -12482,7 +12421,7 @@ you obtain two empty strings.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="o">.</span><span class="fm">__next__</span><span class="p">())</span>
@@ -12502,7 +12441,7 @@ you obtain two empty strings.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>november
+<pre>april
 </pre>
 </div>
 </div>
@@ -12521,12 +12460,13 @@ you obtain two empty strings.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span> <span class="n">s</span> <span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="s2">&quot;Return True if the input sequence is a palindrome&quot;</span>
     <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
 
 <span class="n">is_palindrome</span><span class="p">(</span><span class="s2">&quot;kayak&quot;</span><span class="p">)</span>
 </pre></div>
@@ -12541,7 +12481,7 @@ you obtain two empty strings.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -12570,16 +12510,16 @@ you obtain two empty strings.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    
-     <span class="sd">&quot;&quot;&quot;Print a Fibonacci series up to n.&quot;&quot;&quot;</span>
-     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-     <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Print a Fibonacci series up to n.&quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
          <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>  <span class="c1"># the end optional argument is \n by default</span>
          <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># new line</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># new line</span>
      
 <span class="n">result</span> <span class="o">=</span> <span class="n">fib</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># is None</span>
@@ -12623,7 +12563,7 @@ None
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span> <span class="n">foo</span><span class="p">):</span>
@@ -12664,7 +12604,7 @@ None
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">my_function</span><span class="p">)</span>
@@ -12709,7 +12649,7 @@ my_function(foo)
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
@@ -12754,7 +12694,7 @@ bca
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="p">[]):</span>
@@ -12789,7 +12729,7 @@ bca
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># L = [1]</span>
@@ -12820,7 +12760,7 @@ bca
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># L = [1,2]</span>
@@ -12853,14 +12793,15 @@ bca
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Function-Annotations">Function Annotations<a class="anchor-link" href="#Function-Annotations">&#182;</a></h1><p>Completely optional metadata information about the types used by user-defined functions.</p>
+<h1 id="Function-Annotations">Function Annotations<a class="anchor-link" href="#Function-Annotations">&#182;</a></h1><p>Completely optional metadata information about the types used by user-defined functions.
+These type annotations conforming to <a href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a> could be statically used by <a href="http://mypy-lang.org">MyPy</a>.</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">ham</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">eggs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -12913,7 +12854,7 @@ None
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">):</span>
@@ -12970,7 +12911,7 @@ big data
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">cheeseshop</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="o">*</span><span class="n">arguments</span><span class="p">,</span> <span class="o">**</span><span class="n">keywords</span><span class="p">):</span>
@@ -12999,7 +12940,7 @@ big data
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheeseshop</span><span class="p">(</span><span class="s2">&quot;Limburger&quot;</span><span class="p">,</span> <span class="s2">&quot;It&#39;s very runny, sir.&quot;</span><span class="p">,</span>
@@ -13050,7 +12991,41 @@ sketch : Cheese Shop Sketch
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">taxicab_distance</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x_a</span><span class="p">,</span><span class="n">y_a</span><span class="p">,</span><span class="n">x_b</span><span class="p">,</span><span class="n">y_b</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x_b</span><span class="o">-</span><span class="n">x_a</span><span class="p">)</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">y_b</span><span class="o">-</span><span class="n">y_a</span><span class="p">)</span>
@@ -13079,7 +13054,7 @@ sketch : Cheese Shop Sketch
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13088,10 +13063,10 @@ sketch : Cheese Shop Sketch
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_incrementor</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -13111,7 +13086,7 @@ sketch : Cheese Shop Sketch
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -13135,10 +13110,10 @@ For instance, the built-in range() function is called with the *-operator to unp
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">chessboard_distance</span><span class="p">(</span><span class="n">x_a</span><span class="p">,</span> <span class="n">y_a</span><span class="p">,</span> <span class="n">x_b</span><span class="p">,</span> <span class="n">y_b</span><span class="p">):</span>
@@ -13162,7 +13137,7 @@ For instance, the built-in range() function is called with the *-operator to unp
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -13176,7 +13151,7 @@ For instance, the built-in range() function is called with the *-operator to unp
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13188,7 +13163,7 @@ For instance, the built-in range() function is called with the *-operator to unp
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;a stiff&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;voom&#39;</span><span class="p">):</span>
@@ -13237,19 +13212,6 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">minutes</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span> <span class="c1"># 375 </span>
 <span class="k">print</span><span class="p">(</span><span class="n">minutes</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">46</span><span class="p">))</span> <span class="c1"># 466 </span>
 <span class="k">print</span><span class="p">(</span><span class="n">add_time</span><span class="p">((</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">),(</span><span class="mi">7</span><span class="p">,</span><span class="mi">46</span><span class="p">))</span> <span class="c1"># (14,01)</span>
-</pre></div>
-<p><button data-toggle="collapse" data-target="#hours" class='btn btn-primary'>Solution</button></p>
-<p><div id="hours" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="n">minutes</span> <span class="o">=</span> <span class="k">lambda</span>  <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">:</span> <span class="mi">60</span><span class="o">*</span><span class="n">hours</span><span class="o">+</span><span class="n">minutes</span>
-
-<span class="k">def</span> <span class="nf">hours</span><span class="p">(</span><span class="n">minutes</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">minutes</span><span class="o">//</span><span class="mi">60</span><span class="p">,</span> <span class="n">minutes</span><span class="o">%</span><span class="mi">60</span>
-
-<span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">hh1</span><span class="p">,</span> <span class="n">hh2</span><span class="p">):</span>
-    <span class="n">total_minutes</span> <span class="o">=</span> <span class="n">minutes</span><span class="p">(</span><span class="o">*</span><span class="n">hh1</span><span class="p">)</span><span class="o">+</span><span class="n">minutes</span><span class="p">(</span><span class="o">*</span><span class="n">hh2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">hours</span><span class="p">(</span><span class="n">total_minutes</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0:02d}:{1:02d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">add_time</span><span class="p">((</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">),(</span><span class="mi">7</span><span class="p">,</span><span class="mi">46</span><span class="p">))))</span>
 </pre></div>
 
 </div>
@@ -13467,28 +13429,6 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 <li>Create a function <code>cipher</code> that take the plain text and the key value as arguments and return the encrypted text.</li>
 <li>Create a funtion <code>plain</code> that take the crypted text and the key value as arguments that return the deciphered text.</li>
 </ul>
-<p><button data-toggle="collapse" data-target="#cipher" class='btn btn-primary'>Solution with enumerate</button></p>
-<p><div id="cipher" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
-<span class="k">def</span> <span class="nf">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="s2">&quot; Crypt text using Caesar cipher&quot;</span>
-
-    <span class="n">crypted_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">alphabet</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="n">l</span><span class="p">:</span>
-                <span class="n">crypted_text</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span>
-
-    <span class="k">return</span> <span class="n">crypted_text</span>
-
-<span class="k">def</span> <span class="nf">plain</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="s2">&quot; Uncrypt text using Caesar cipher&quot;</span>
-    <span class="k">return</span> <span class="n">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="o">-</span><span class="n">key</span><span class="p">)</span>
-
-<span class="n">s</span> <span class="o">=</span> <span class="n">cipher</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span> <span class="n">s</span> <span class="p">)</span>
-<span class="n">plain</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-</pre></div>
 
 </div>
 </div>
@@ -13504,7 +13444,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -13538,47 +13478,13 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise:">Exercise:<a class="anchor-link" href="#Exercise:">&#182;</a></h3><p>Code a new version of your cypher function to crypt also upper case character.</p>
-<p>Hints:</p>
-<ul>
-<li>use <code>zip</code> to loop over upper and lower case alphabets.</li>
-<li>don't use list comprehension.</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#cypherzip" class='btn btn-primary'>Solution</button></p>
-<p><div id="cypherzip" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
-    <span class="n">l_alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
-    <span class="n">u_alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
-    <span class="n">crypted_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">l</span><span class="p">),</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">l_alphabet</span><span class="p">),</span><span class="n">u_alphabet</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="n">l</span><span class="p">:</span>
-                <span class="n">crypted_text</span> <span class="o">+=</span> <span class="n">l_alphabet</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="n">shift</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span>
-            <span class="k">elif</span> <span class="n">c</span> <span class="o">==</span> <span class="n">u</span><span class="p">:</span>
-                <span class="n">crypted_text</span> <span class="o">+=</span> <span class="n">u_alphabet</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="n">shift</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span>
-
-    <span class="k">return</span> <span class="n">crypted_text</span>
-
-<span class="k">def</span> <span class="nf">plain</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="o">-</span><span class="n">shift</span><span class="p">)</span>
-
-<span class="n">s</span> <span class="o">=</span> <span class="n">cipher</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span> <span class="n">s</span> <span class="p">)</span>
-<span class="n">plain</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-</pre></div>
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Code a new version of your cypher function to crypt also upper case character. 
+Use <code>zip</code> to loop over upper and lower case alphabets.</p>
 
 </div>
 </div>
@@ -13597,11 +13503,14 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="p">[</span><span class="n">elem</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">li</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lsingle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">ldouble</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">li</span><span class="p">:</span>
+    <span class="n">ldouble</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+<span class="n">ldouble</span>
 </pre></div>
 
 </div>
@@ -13614,7 +13523,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -13631,7 +13540,20 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ldouble</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">lsingle</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)]</span>
@@ -13647,7 +13569,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13661,10 +13583,10 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">]</span>
@@ -13680,7 +13602,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -13697,7 +13619,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span> <span class="k">if</span> <span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span> <span class="k">else</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="p">]</span>
@@ -13713,7 +13635,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[41]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13732,7 +13654,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise:">Exercise:<a class="anchor-link" href="#Exercise:">&#182;</a></h3><p>Code a new version of cypher function using list comprehension.</p>
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3><p>Code a new version of cypher function using list comprehension.</p>
 <p>Hints:</p>
 <ul>
 <li><code>s = ''.join(L)</code> convert the characters list <code>L</code> into a string <code>s</code>.</li>
@@ -13742,28 +13664,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#cipher2" class='btn btn-primary'>Solution</button></p>
-<p><div id="cipher2" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
-    <span class="n">ll</span> <span class="o">=</span> <span class="p">[</span><span class="n">alphabet</span><span class="p">[(</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span> <span class="p">]</span>
-    <span class="n">alphabet</span> <span class="o">=</span> <span class="n">alphabet</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="p">[</span><span class="n">alphabet</span><span class="p">[(</span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ll</span> <span class="p">]</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">cipher</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">cipher</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">plain</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13775,7 +13676,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">hex</span><span class="p">,</span><span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
@@ -13796,7 +13697,7 @@ tuples of length 2 as input arguments and return the tuple (hh,mm). </li>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;map object at 0x10c8f47f0&gt;
+<pre>&lt;map object at 0x10622c940&gt;
 </pre>
 </div>
 </div>
@@ -13817,7 +13718,7 @@ Display result by using unpacking operator.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">res</span><span class="p">)</span>
@@ -13856,7 +13757,7 @@ Display result by using unpacking operator.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
@@ -13900,10 +13801,10 @@ Display result by using unpacking operator.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 <span class="o">%</span><span class="k">timeit</span> lmap = map(f,M)
 </pre></div>
@@ -13922,7 +13823,7 @@ Display result by using unpacking operator.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>253 ns ± 2.94 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<pre>216 ns ± 5.07 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre>
 </div>
 </div>
@@ -13933,10 +13834,10 @@ Display result by using unpacking operator.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 <span class="o">%</span><span class="k">timeit</span> lfor = (f(m) for m in M)
 </pre></div>
@@ -13955,7 +13856,7 @@ Display result by using unpacking operator.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>424 ns ± 3.81 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<pre>405 ns ± 10.2 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre>
 </div>
 </div>
@@ -13975,7 +13876,7 @@ Display result by using unpacking operator.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -14016,7 +13917,7 @@ Display result by using unpacking operator.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -14038,7 +13939,7 @@ Display result by using unpacking operator.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>242 ns ± 1.99 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<pre>209 ns ± 4.45 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre>
 </div>
 </div>
@@ -14049,7 +13950,7 @@ Display result by using unpacking operator.</p>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -14070,7 +13971,7 @@ Display result by using unpacking operator.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>427 ns ± 3.04 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<pre>394 ns ± 20.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre>
 </div>
 </div>
@@ -14091,36 +13992,7 @@ Display result by using unpacking operator.</p>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#cipher3" class='btn btn-primary'>Solution</button></p>
-<p><div id="cipher3" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">key</span> <span class="p">):</span>
-    <span class="n">l_alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
-    <span class="n">u_alphabet</span> <span class="o">=</span> <span class="n">l_alphabet</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">shift</span><span class="p">(</span> <span class="n">c</span> <span class="p">):</span>
-        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
-            <span class="k">return</span> <span class="n">l_alphabet</span><span class="p">[(</span><span class="n">l_alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">u_alphabet</span><span class="p">[(</span><span class="n">u_alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="mi">26</span><span class="p">]</span>
-
-    <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">shift</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">cipher</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">plain</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">cipher</span><span class="p">(</span> <span class="n">text</span><span class="p">,</span> <span class="o">-</span><span class="n">key</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">plain</span><span class="p">(</span><span class="n">cipher</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14131,18 +14003,17 @@ Display result by using unpacking operator.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span> <span class="n">n</span> <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Return nth</span>
-<span class="sd">          Fibonacci number &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-       <span class="k">return</span> <span class="n">n</span>
-    <span class="k">else</span><span class="p">:</span>
-       <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span> <span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; returns the greatest common divisor.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">y</span>
+    <span class="k">else</span> <span class="p">:</span> 
+        <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">y</span> <span class="o">%</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
-<span class="n">fibo</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">gcd</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14155,13 +14026,13 @@ Display result by using unpacking operator.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[49]:</div>
+<div class="prompt output_prompt">Out[64]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>55</pre>
+<pre>4</pre>
 </div>
 
 </div>
@@ -14177,64 +14048,7 @@ Display result by using unpacking operator.</p>
 <h3 id="Exercise:-factorial">Exercise: factorial<a class="anchor-link" href="#Exercise:-factorial">&#182;</a></h3><ul>
 <li>Write the function <code>factorial</code> with a recursive call</li>
 </ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#factorial" class='btn btn-primary'>Solution</button></p>
-<p><div id="factorial" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Return n! &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
 <p>NB: Recursion is not recommended by <a href="http://neopythonic.blogspot.co.uk/2009/04/tail-recursion-elimination.html">Guido</a>.</p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise:-Narcissistic-number">Exercise: Narcissistic number<a class="anchor-link" href="#Exercise:-Narcissistic-number">&#182;</a></h3><p>A  number is narcissistic if the sum of its own digits each raised to the power of the number of digits.</p>
-<p>Example : $4150 = 4^5 + ^5 + 5^5 + 0^5$ or $153 = 1^3 + 5^3 + 3^3$</p>
-<p>Find narcissitic numbers with 3 digits</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#narcissitic" class='btn btn-primary'>Solution</button></p>
-<p><div id="narcissitic" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">narcissitic</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return True if n is a narcissitic number with 3 digits &quot;&quot;&quot;</span>
-    <span class="k">assert</span>  <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">==</span> <span class="mi">3</span>  <span class="c1"># check if n contains 3 digits </span>
-    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">tmp</span> <span class="o">=</span> <span class="n">n</span>
-    <span class="k">while</span> <span class="n">tmp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">%</span> <span class="mi">10</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="n">d</span> <span class="o">**</span> <span class="mi">3</span>
-        <span class="n">tmp</span> <span class="o">//=</span> <span class="mi">10</span>
-    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">n</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="bp">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">False</span>
-
-<span class="o">%</span><span class="n">time</span> <span class="k">print</span><span class="p">([</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="k">if</span> <span class="n">narcissitic</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
-</pre></div>
 
 </div>
 </div>
@@ -14247,47 +14061,42 @@ Display result by using unpacking operator.</p>
 <li>A Polynomial is represented by a Python list of its coefficients.
   [1,5,-4] =&gt; $1+5x-4x^2$</li>
 <li>Write the function diff(P,n) that return the nth derivative Q</li>
-<li>Don't use any external package 😉</li>
+<li>Don't use any external package 😉
+<pre><code>diff([3,2,1,5,7],2) = [2, 30, 84]
+diff([-6,5,-3,-4,3,-4],3) = [-24, 72, -240]</code></pre>
+</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># diff([3,2,1,5,7],2) = [2, 30, 84]</span>
-<span class="c1"># diff([-6,5,-3,-4,3,-4],3) = [-24, 72, -240]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#polynom" class='btn btn-primary'>Solution</button></p>
-<p><div id="polynom" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Return the nth derivative of polynom P &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">P</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">diff</span><span class="p">([</span><span class="n">i</span> <span class="o">*</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="p">))],</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-
-<span class="k">print</span><span class="p">(</span><span class="n">diff</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span><span class="mi">2</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">diff</span><span class="p">([</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
+<h3 id="Exercise:-non-palindromic-skinny-numbers">Exercise: <a href="https://oeis.org/A035123">non-palindromic skinny numbers</a><a class="anchor-link" href="#Exercise:-non-palindromic-skinny-numbers">&#182;</a></h3><p>non-palindromic squares remaining square when written backwards</p>
+<p>$$
+\begin{array}{lclclcl}
+10^2  &amp;=&amp; 100   &amp;\qquad&amp; 01^2  &amp;=&amp; 001 \\
+13^2  &amp;=&amp; 169   &amp;\qquad&amp; 31^2  &amp;=&amp; 961 \\
+102^2 &amp;=&amp; 10404 &amp;\qquad&amp; 201^2 &amp;=&amp; 40401
+\end{array}
+$$</p>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise:-Narcissistic-number">Exercise: Narcissistic number<a class="anchor-link" href="#Exercise:-Narcissistic-number">&#182;</a></h3><p>A  number is narcissistic if the sum of its own digits each raised to the power of the number of digits.</p>
+<p>Example : $4150 = 4^5 + 1^5 + 5^5 + 0^5$ or $153 = 1^3 + 5^3 + 3^3$</p>
+<p>Find narcissitic numbers with 3 digits</p>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14315,38 +14124,7 @@ $$</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#happy" class='btn btn-primary'>Solution</button></p>
-<p><div id="happy" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_happy</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="s2">&quot; Check if a number is happy &quot;</span>
-    <span class="n">unhappy_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-            <span class="n">r</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">True</span>
-        <span class="k">elif</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">unhappy_list</span><span class="p">:</span> <span class="c1"># If a member of its sequence is unhappy</span>
-            <span class="k">return</span> <span class="bp">False</span>      <span class="c1"># then the number is unhappy</span>
-        <span class="n">unhappy_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">r</span>
-
-<span class="k">def</span> <span class="nf">happy</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="s2">&quot;Return happy numbers &lt; n&quot;</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_happy</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-
-
-<span class="n">happy</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 

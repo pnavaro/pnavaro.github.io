@@ -12176,7 +12176,7 @@ a.anchor-link {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># rjust or center can be used</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># rjust or center can be used</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
@@ -12194,12 +12194,12 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1  1   1    1     1      1       1        
-1  2   4    8     16     32      64       
-1  3   9    27    81     243     729      
-1  4   16   64    256    1024    4096     
-1  5   25   125   625    3125    15625    
-1  6   36   216   1296   7776    46656    
+<pre> 1   1    1     1      1       1        1 
+ 1   2    4     8     16      32       64 
+ 1   3    9    27     81     243      729 
+ 1   4   16    64    256    1024     4096 
+ 1   5   25   125    625    3125    15625 
+ 1   6   36   216   1296    7776    46656 
 </pre>
 </div>
 </div>
@@ -12350,11 +12350,50 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of PI is approximately </span><span class="si">{0:.4f}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of PI is approximately </span><span class="si">{:.7g}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The value of PI is approximately 3.141593.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Formatted-string-literals-(Python-3.6)">Formatted string literals (Python 3.6)<a class="anchor-link" href="#Formatted-string-literals-(Python-3.6)">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The value of PI is approximately </span><span class="si">{math.pi:.4f}</span><span class="s1">.&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12379,32 +12418,44 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Formatted-string-literals-(Python-3.6)">Formatted string literals (Python 3.6)<a class="anchor-link" href="#Formatted-string-literals-(Python-3.6)">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Fred&quot;</span>
-<span class="n">f</span><span class="s2">&quot;He said his name is </span><span class="si">{name!r}</span><span class="s2">.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;He said his name is </span><span class="si">{name}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;He said his name is </span><span class="si">{name!r}</span><span class="s2">.&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>He said his name is Fred.
+He said his name is &#39;Fred&#39;.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="s2">&quot;He said his name is {repr(name)}.&quot;</span>  <span class="c1"># repr() is equivalent to !r</span>
@@ -12414,26 +12465,89 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;He said his name is &#39;Fred&#39;.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">value</span> <span class="o">=</span> <span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;12.34567&quot;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="s2">&quot;result: {value:</span><span class="si">{width}</span><span class="s2">.</span><span class="si">{precision}</span><span class="s2">}&quot;</span>  <span class="c1"># nested fields</span>
-<span class="s1">&#39;result:      12.35&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="s2">&quot;{today:%B </span><span class="si">%d</span><span class="s2">, %Y}&quot;</span>  <span class="c1"># using date format specifier</span>
-<span class="s1">&#39;January 27, 2017&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1024</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{number:#0x}</span><span class="s2">&quot;</span>  <span class="c1"># using integer format specifier</span>
-<span class="s1">&#39;0x400&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">width</span><span class="p">,</span> <span class="n">precision</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span>
+<span class="n">value</span> <span class="o">=</span> <span class="mf">12.34567</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;result: {value:</span><span class="si">{width}</span><span class="s2">.</span><span class="si">{precision}</span><span class="s2">f}&quot;</span><span class="p">)</span>  <span class="c1"># nested fields</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>result:    12.3457
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{today:%B </span><span class="si">%d</span><span class="s2">, %Y}&quot;</span><span class="p">)</span>  <span class="c1"># using date format specifier</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>January 27, 2017
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12460,34 +12574,6 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#pascal" class='btn btn-primary'>Solution</button></p>
-<p><div id="pascal" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>    
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">b</span> <span class="o">*=</span> <span class="n">n</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">//</span> <span class="n">i</span>
-        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">b</span>
-
-<span class="k">def</span> <span class="nf">pascal_triangle</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">line</span> <span class="o">=</span> <span class="p">[</span><span class="n">binomial</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="s2">&quot; &quot;</span> <span class="c1"># number of spaces</span>
-        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="s2">&quot; &quot;</span> <span class="c1"># coeffs repr split by 3 spaces</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-
-<span class="n">pascal_triangle</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Reading-and-Writing-Files">Reading and Writing Files<a class="anchor-link" href="#Reading-and-Writing-Files">&#182;</a></h1><p><code>open()</code> returns a file object, and is most commonly used with file name and accessing mode argument.</p>
 
 </div>
@@ -12495,7 +12581,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -12548,7 +12634,7 @@ a.anchor-link {
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -12566,7 +12652,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -12583,7 +12669,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">read_text</span>
@@ -12599,7 +12685,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -12616,7 +12702,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span><span class="o">=</span> <span class="p">[]</span>
@@ -12638,7 +12724,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -12668,7 +12754,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -12719,7 +12805,7 @@ a.anchor-link {
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lorem</span> <span class="k">import</span> <span class="n">text</span>
@@ -12737,13 +12823,13 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;Sit modi adipisci quiquia. Numquam consectetur quiquia amet labore dolor. Ipsum sed quiquia quaerat consectetur eius. Etincidunt magnam velit dolorem magnam etincidunt porro ut. Consectetur voluptatem modi adipisci. Est dolor tempora velit magnam labore sed non. Etincidunt quiquia labore velit eius dolor. Quiquia dolorem quiquia quiquia.\n\nEius est ipsum velit velit. Adipisci est porro etincidunt ut quaerat. Dolorem neque numquam velit velit. Sit amet quisquam numquam. Sit amet eius ut. Dolore dolore adipisci non porro dolor aliquam amet.\n\nPorro sit numquam porro. Amet ut quiquia sed quiquia quiquia adipisci numquam. Amet labore ipsum aliquam quaerat amet. Consectetur non sed quaerat sed. Dolore voluptatem labore quaerat. Quiquia ut adipisci eius consectetur est. Porro dolore quiquia quisquam.\n\nUt amet quiquia quisquam. Porro sed est labore dolore ipsum. Dolore quisquam dolor porro eius. Porro amet tempora voluptatem modi. Eius velit adipisci quaerat neque ipsum non voluptatem.\n\nEius modi tempora voluptatem dolor modi consectetur. Quaerat porro voluptatem ut neque etincidunt quisquam dolore. Quiquia eius dolorem est numquam est sit. Neque etincidunt modi velit dolore labore neque amet. Porro voluptatem porro ut quisquam adipisci ipsum. Amet amet neque adipisci. Sed labore tempora eius labore voluptatem. Sit dolore voluptatem quiquia porro labore est.\n\nTempora dolorem ipsum voluptatem eius. Quisquam tempora labore quiquia. Est labore tempora quiquia. Quaerat non ut sed amet porro. Est quiquia dolor magnam porro ut etincidunt ipsum. Quaerat ut tempora labore amet velit amet. Labore dolorem ipsum sit porro. Quiquia quiquia eius quiquia quaerat dolorem velit.&#39;</pre>
+<pre>&#39;Sed quisquam adipisci quisquam. Modi amet velit consectetur quiquia ipsum. Porro etincidunt numquam sed quaerat tempora. Voluptatem quisquam quaerat consectetur etincidunt labore voluptatem. Numquam etincidunt velit consectetur dolorem ipsum. Amet neque dolorem neque ipsum. Ipsum quaerat neque labore ut amet sed. Labore magnam adipisci adipisci numquam. Magnam ipsum dolor quiquia magnam etincidunt ipsum.\n\nSed aliquam consectetur dolore quaerat magnam dolorem tempora. Non eius modi sed non sed. Tempora aliquam neque neque porro consectetur neque. Quisquam sed aliquam amet magnam neque dolore. Porro est neque quisquam.\n\nEst sit magnam dolorem. Etincidunt eius aliquam aliquam consectetur. Quaerat adipisci consectetur labore est magnam magnam modi. Numquam aliquam adipisci adipisci magnam sed consectetur neque. Numquam ut sit voluptatem labore est. Non sed ut non. Adipisci dolorem numquam ipsum. Consectetur labore velit dolore. Dolor voluptatem ipsum modi non sed numquam ut.\n\nTempora dolorem aliquam adipisci dolore dolor quisquam. Voluptatem non eius non sed neque magnam tempora. Dolore quiquia etincidunt voluptatem consectetur sit sit. Neque sed porro dolorem non. Numquam consectetur magnam non dolore tempora aliquam. Adipisci numquam modi modi. Sed quiquia magnam magnam sed.\n\nVoluptatem labore modi eius. Eius ipsum non aliquam non labore sed. Dolore sit sed voluptatem quaerat. Ut amet quaerat consectetur. Non dolor sit non dolor dolore.\n\nNeque labore quisquam voluptatem ipsum. Ipsum voluptatem dolorem labore ut dolorem adipisci. Ut labore non consectetur. Voluptatem etincidunt est quisquam. Eius dolore tempora aliquam porro non ut consectetur. Amet modi quaerat labore sed velit.&#39;</pre>
 </div>
 
 </div>
@@ -12751,23 +12837,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#sample" class='btn btn-primary'>Solution</button></p>
-<p><div id="sample" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">words</span><span class="p">(</span> <span class="n">file</span> <span class="p">):</span>
@@ -12786,31 +12859,43 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#words" class='btn btn-primary'>Solution</button></p>
-<p><div id="words" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">words</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Parse a file and returns a sorted list of words &quot;&quot;&quot;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># remove leading and trailing whitespace</span>
-            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># set every character to lower case </span>
-            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>   <span class="c1"># remove all dots</span>
-            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
-               <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-
-<span class="n">words</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;word1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;word2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">d</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;word1&#39;: 3, &#39;word2&#39;: 2}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
@@ -12834,36 +12919,6 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><button data-toggle="collapse" data-target="#reduce" class='btn btn-primary'>Solution</button></p>
-<p><div id="reduce" class="collapse"></p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reduce</span> <span class="p">(</span> <span class="n">words</span> <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Count the number of occurences of a word in list</span>
-<span class="sd">    and return a dictionary &quot;&quot;&quot;</span>
-    <span class="n">current_word</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">current_word</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">current_word</span> <span class="o">=</span> <span class="n">word</span>
-            <span class="n">result</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Add the first word in result</span>
-
-        <span class="c1"># this if only works because words output is sorted </span>
-        <span class="k">if</span> <span class="n">current_word</span> <span class="o">==</span> <span class="n">word</span><span class="p">:</span>
-            <span class="n">result</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">current_word</span> <span class="o">=</span> <span class="n">word</span>
-            <span class="n">result</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">return</span> <span class="n">result</span>
-<span class="nb">reduce</span><span class="p">(</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12880,7 +12935,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -12897,7 +12952,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -12914,10 +12969,10 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Pierre Navaro&quot;</span><span class="p">,</span> <span class="n">univ</span><span class="o">=</span><span class="s2">&quot;Rennes1&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;IR&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Pierre Navaro&quot;</span><span class="p">,</span> <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;CNRS&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;IR&quot;</span><span class="p">)</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile.json&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
@@ -12929,7 +12984,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile.json&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -12947,13 +13002,13 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;name&#39;: &#39;Pierre Navaro&#39;, &#39;position&#39;: &#39;IR&#39;, &#39;univ&#39;: &#39;Rennes1&#39;}</pre>
+<pre>{&#39;name&#39;: &#39;Pierre Navaro&#39;, &#39;organization&#39;: &#39;CNRS&#39;, &#39;position&#39;: &#39;IR&#39;}</pre>
 </div>
 
 </div>
@@ -12964,7 +13019,7 @@ a.anchor-link {
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cat</span> workfile.json
@@ -12984,7 +13039,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#34;name&#34;: &#34;Pierre Navaro&#34;, &#34;univ&#34;: &#34;Rennes1&#34;, &#34;position&#34;: &#34;IR&#34;}</pre>
+<pre>{&#34;name&#34;: &#34;Pierre Navaro&#34;, &#34;organization&#34;: &#34;CNRS&#34;, &#34;position&#34;: &#34;IR&#34;}</pre>
 </div>
 </div>
 
@@ -13001,7 +13056,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></div></section></section>
 </div>
 </div>
 

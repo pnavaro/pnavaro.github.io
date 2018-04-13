@@ -11972,57 +11972,6 @@ if __name__ == &quot;__main__&quot;:
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cat</span> fibo.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&#34;&#34;&#34; Simple module with
-    two functions to compute Fibonacci series &#34;&#34;&#34;
-
-def fib1(n):
-   &#34;&#34;&#34; write Fibonacci series up to n &#34;&#34;&#34;
-   a, b = 0, 1
-   while b &lt; n:
-      print(b, end=&#39;, &#39;)
-      a, b = b, a+b
-
-def fib2(n):   
-    &#34;&#34;&#34; return Fibonacci series up to n &#34;&#34;&#34;
-    result = []
-    a, b = 0, 1
-    while b &lt; n:
-        result.append(b)
-        a, b = b, a+b
-    return result
-
-if __name__ == &#34;__main__&#34;:
-    import sys
-    fib1(int(sys.argv[1]))</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12034,11 +11983,12 @@ if __name__ == &#34;__main__&#34;:
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fibo</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fibo</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fibo</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
 <span class="n">fibo</span><span class="o">.</span><span class="n">fib1</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 
@@ -12057,6 +12007,7 @@ if __name__ == &#34;__main__&#34;:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>fibo
+/Users/navaro/math-python/fibo.py
 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, </pre>
 </div>
 </div>
@@ -12064,13 +12015,13 @@ if __name__ == &#34;__main__&#34;:
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fibo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">fibo</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12087,8 +12038,26 @@ if __name__ == &#34;__main__&#34;:
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre> Simple module with
-    two functions to compute Fibonacci series 
+<pre>Help on module fibo:
+
+NAME
+    fibo
+
+DESCRIPTION
+    Simple module with
+    two functions to compute Fibonacci series
+
+FUNCTIONS
+    fib1(n)
+        write Fibonacci series up to n
+    
+    fib2(n)
+        return Fibonacci series up to n
+
+FILE
+    /Users/navaro/math-python/fibo.py
+
+
 </pre>
 </div>
 </div>
@@ -12096,7 +12065,7 @@ if __name__ == &#34;__main__&#34;:
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12116,7 +12085,7 @@ if __name__ == &#34;__main__&#34;:
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> fibo.py 1000
@@ -12155,7 +12124,7 @@ if __name__ == &#34;__main__&#34;:
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fib1</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
@@ -12220,7 +12189,7 @@ if __name__ == &#34;__main__&#34;:
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">sqrt</span>
@@ -12238,7 +12207,7 @@ if __name__ == &#34;__main__&#34;:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -12255,7 +12224,7 @@ if __name__ == &#34;__main__&#34;:
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">sqrt</span>
@@ -12285,7 +12254,7 @@ if __name__ == &#34;__main__&#34;:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -12300,6 +12269,40 @@ if __name__ == &#34;__main__&#34;:
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="n">j</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1j 1j
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12330,7 +12333,7 @@ if __name__ == &#34;__main__&#34;:
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -12347,20 +12350,57 @@ if __name__ == &#34;__main__&#34;:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>[&#39;&#39;,
- &#39;/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python36.zip&#39;,
- &#39;/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6&#39;,
- &#39;/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/lib-dynload&#39;,
+ &#39;/Users/navaro/PIC/src/picongpu/lib/python&#39;,
+ &#39;/Users/navaro/math-python&#39;,
+ &#39;/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python36.zip&#39;,
+ &#39;/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6&#39;,
+ &#39;/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/lib-dynload&#39;,
  &#39;/usr/local/lib/python3.6/site-packages&#39;,
  &#39;/usr/local/lib/python3.6/site-packages/dynumpop-0.0.1-py3.6.egg&#39;,
+ &#39;/Users/navaro/jupyter-CAF-kernel/prebuild/jupyter-caf-kernel&#39;,
  &#39;/usr/local/lib/python3.6/site-packages/IPython/extensions&#39;,
  &#39;/Users/navaro/.ipython&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">collections</span><span class="o">.</span><span class="n">__path__</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/collections&#39;]</pre>
 </div>
 
 </div>
@@ -12378,18 +12418,18 @@ if __name__ == &#34;__main__&#34;:
 <li>This directory always contains a file name __init__.py</li>
 </ul>
 <pre>
-marseille/ Main package
-    __init__.py Initialize my_module
-    cirm/ Sub package
-        __init__.py
-        bastide.py
-        annexe.py 
-        auditorium.py
-    calanques/ Sub package
-        __init__.py
-        sugiton.py
-        morgiou.py
-        sorgiou.py
+marseille
+├── __init__.py
+├── calanques
+│   ├── __init__.py
+│   ├── morgiou.py
+│   ├── sorgiou.py
+│   └── sugiton.py
+└── cirm
+    ├── __init__.py
+    ├── annexe.py
+    ├── auditorium.py
+    └── bastide.py
 </pre>
 </div>
 </div>
@@ -12406,6 +12446,240 @@ marseille/ Main package
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reminder">Reminder<a class="anchor-link" href="#Reminder">&#182;</a></h2><p>Don't forget that importing * is not recommended</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="nb">sum</span> <span class="c1"># delete imported sum function from numpy </span>
+<span class="n">help</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function sum in module builtins:
+
+sum(iterable, start=0, /)
+    Return the sum of a &#39;start&#39; value (default: 0) plus an iterable of numbers
+    
+    When the iterable is empty, return the start value.
+    This function is intended specifically for use with numeric values and may
+    reject non-numeric types.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">help</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function sum in module numpy.core.fromnumeric:
+
+sum(a, axis=None, dtype=None, out=None, keepdims=&lt;class &#39;numpy._globals._NoValue&#39;&gt;)
+    Sum of array elements over a given axis.
+    
+    Parameters
+    ----------
+    a : array_like
+        Elements to sum.
+    axis : None or int or tuple of ints, optional
+        Axis or axes along which a sum is performed.  The default,
+        axis=None, will sum all of the elements of the input array.  If
+        axis is negative it counts from the last to the first axis.
+    
+        .. versionadded:: 1.7.0
+    
+        If axis is a tuple of ints, a sum is performed on all of the axes
+        specified in the tuple instead of a single axis or all the axes as
+        before.
+    dtype : dtype, optional
+        The type of the returned array and of the accumulator in which the
+        elements are summed.  The dtype of `a` is used by default unless `a`
+        has an integer dtype of less precision than the default platform
+        integer.  In that case, if `a` is signed then the platform integer
+        is used while if `a` is unsigned then an unsigned integer of the
+        same precision as the platform integer is used.
+    out : ndarray, optional
+        Alternative output array in which to place the result. It must have
+        the same shape as the expected output, but the type of the output
+        values will be cast if necessary.
+    keepdims : bool, optional
+        If this is set to True, the axes which are reduced are left
+        in the result as dimensions with size one. With this option,
+        the result will broadcast correctly against the input array.
+    
+        If the default value is passed, then `keepdims` will not be
+        passed through to the `sum` method of sub-classes of
+        `ndarray`, however any non-default value will be.  If the
+        sub-classes `sum` method does not implement `keepdims` any
+        exceptions will be raised.
+    
+    Returns
+    -------
+    sum_along_axis : ndarray
+        An array with the same shape as `a`, with the specified
+        axis removed.   If `a` is a 0-d array, or if `axis` is None, a scalar
+        is returned.  If an output array is specified, a reference to
+        `out` is returned.
+    
+    See Also
+    --------
+    ndarray.sum : Equivalent method.
+    
+    cumsum : Cumulative sum of array elements.
+    
+    trapz : Integration of array values using the composite trapezoidal rule.
+    
+    mean, average
+    
+    Notes
+    -----
+    Arithmetic is modular when using integer types, and no error is
+    raised on overflow.
+    
+    The sum of an empty array is the neutral element 0:
+    
+    &gt;&gt;&gt; np.sum([])
+    0.0
+    
+    Examples
+    --------
+    &gt;&gt;&gt; np.sum([0.5, 1.5])
+    2.0
+    &gt;&gt;&gt; np.sum([0.5, 0.7, 0.2, 1.5], dtype=np.int32)
+    1
+    &gt;&gt;&gt; np.sum([[0, 1], [0, 5]])
+    6
+    &gt;&gt;&gt; np.sum([[0, 1], [0, 5]], axis=0)
+    array([0, 6])
+    &gt;&gt;&gt; np.sum([[0, 1], [0, 5]], axis=1)
+    array([1, 5])
+    
+    If the accumulator is too small, overflow occurs:
+    
+    &gt;&gt;&gt; np.ones(128, dtype=np.int8).sum(dtype=np.int8)
+    -128
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>

@@ -11928,12 +11928,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div><script>
-    function hide_prompt() {
-        $('div.prompt').hide(); // always hide prompt
-    }
-    $( document ).ready(hide_prompt);
-</script></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11999,12 +11994,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Jupyter---Start-The-Notebook">Jupyter - Start The Notebook<a class="anchor-link" href="#Jupyter---Start-The-Notebook">&#182;</a></h1><p>Clone the repository (you can install git with conda):</p>
-
-<pre><code>conda install git
-git config --global user.name “Prenom Nom"
-git config --global user.email “prenom.nom@univ-rennes1.fr"</code></pre>
-<p>Open the notebook</p>
+<h1 id="Jupyter---Start-The-Notebook">Jupyter - Start The Notebook<a class="anchor-link" href="#Jupyter---Start-The-Notebook">&#182;</a></h1><p>Open the notebook</p>
 
 <pre><code>conda install jupyter
 jupyter notebook</code></pre>
@@ -12070,13 +12060,14 @@ jupyter notebook</code></pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">s</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">6625</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span><span class="o">+</span><span class="n">s</span>
 </pre></div>
 
 </div>
@@ -12099,6 +12090,24 @@ jupyter notebook</code></pre>
 </div>
 </div>
 
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-4815969b9079&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> a <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">6625</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>a<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg"> </span>a<span class="ansi-blue-fg">+</span>s
+
+<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12117,8 +12126,6 @@ jupyter notebook</code></pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">file</span> hello.py
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*-
 
 s = &quot;Hello World!&quot;
 print(type(s),s)
@@ -12140,7 +12147,7 @@ print(type(a),a)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Overwriting hello.py
+<pre>Writing hello.py
 </pre>
 </div>
 </div>
@@ -12153,8 +12160,7 @@ print(type(a),a)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span>$ chmod +x hello.py
-$ python3 hello.py
+<div class="highlight"><pre><span></span>$ python3 hello.py
 &lt;class <span class="s1">&#39;str&#39;</span>&gt; Hello World!
 &lt;class <span class="s1">&#39;int&#39;</span>&gt; <span class="m">6625</span>
 </pre></div>
@@ -12193,7 +12199,7 @@ $ python3 hello.py
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2010</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
@@ -12242,7 +12248,7 @@ $ python3 hello.py
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">45</span>      <span class="c1"># This is a comment!</span>
@@ -12275,7 +12281,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mf">2.5</span>
@@ -12307,10 +12313,10 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="n">y</span><span class="p">)</span>   <span class="c1"># classic division returns a float</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="n">y</span><span class="p">)</span>   <span class="c1"># true division returns a float</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># floor division discards the fractional part</span>
 </pre></div>
 
@@ -12340,7 +12346,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">8</span><span class="p">)</span> <span class="c1"># the % operator returns the remainder of the division</span>
@@ -12371,7 +12377,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;x = </span><span class="si">%05d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># You can use C format rules to improve print output</span>
@@ -12416,7 +12422,7 @@ $ python3 hello.py
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
@@ -12448,7 +12454,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
@@ -12480,7 +12486,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">,</span> <span class="n">a</span>     <span class="c1"># Nice way to permute values</span>
@@ -12512,7 +12518,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">,</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
@@ -12528,7 +12534,7 @@ $ python3 hello.py
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -12553,7 +12559,7 @@ $ python3 hello.py
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
@@ -12574,20 +12580,20 @@ $ python3 hello.py
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Please enter your name: Navaro
+<pre>Please enter your name: Pierre
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;Navaro&#39;</pre>
+<pre>&#39;Pierre&#39;</pre>
 </div>
 
 </div>
@@ -12598,7 +12604,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter an integer: &quot;</span><span class="p">))</span>
@@ -12619,20 +12625,20 @@ $ python3 hello.py
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Please enter an integer: 42
+<pre>Please enter an integer: 12
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>42</pre>
+<pre>12</pre>
 </div>
 
 </div>
@@ -12643,7 +12649,7 @@ $ python3 hello.py
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter 3 values &quot;</span><span class="p">))</span>
@@ -12671,7 +12677,7 @@ $ python3 hello.py
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 

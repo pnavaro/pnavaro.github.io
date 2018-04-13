@@ -1,4 +1,3 @@
-
 title:
 	mkdir -p slides
 	echo "<h1> Python slides </h1>" > index.html
