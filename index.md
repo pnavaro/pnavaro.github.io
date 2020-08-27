@@ -1,6 +1,4 @@
----
-title: Pierre Navaro
----
+
 
 # Python courses
 
